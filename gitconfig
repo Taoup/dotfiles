@@ -1,0 +1,24 @@
+[alias]
+
+	# View abbreviated SHA, description, and history graph of the latest 20 commits.
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	# View the current working tree status using the short format.
+	s = status -s
+
+	# Show the diff between the latest commit and the current state.
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+	# List aliases.
+	aliases = config --get-regexp alias
+
+	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+
+	# Show the user email for the current repository.
+	whoami = config user.email
+
+
+[user]
+	email = mahongtao0x7e0@163.com
+
+[init]
+	defaultBranch = main

@@ -6,8 +6,9 @@
 
 - link:
     ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
+    #~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.gitconfig: gitconfig
 
 - create:
     - ~/downloads
