@@ -1,42 +1,12 @@
 set textwidth=80
 
 :inoremap jk <esc>
-:inoremap {} {<esc>o}<esc>
-":nnoremap ev :e $MYVIMRC<cr>
-":nnoremap et :e ~/LIFE/tech/tools<cr>
-":nnoremap sv :source $MYVIMRC<cr>
-":nnoremap S" viw<esc>a"<esc>bi"<esc>lel
-":nnoremap H 0
-":nnoremap L $
-":nnoremap <space> o<esc>
-:nnoremap / /\v
-:nnoremap <F2> oDate:<esc>:r !date<cr>kJ
-"operator pending mode mapping: mapping the motion inside parenthesis to p
-:onoremap p i(
-"compared to previous mapping, the following two is useless, remove it later.
-:onoremap in( :<c-u>normal! f(vi(<cr>
-:onoremap il( :<c-u>normal! F(vi(<cr>
 
 :cnoremap W w
 
 set cursorcolumn
 set cursorline
-"normally I use :%s a lot, seldom :s
-":nnoremap :s :%s
 
-"exercise in zhejiang univercity pat, using copy whole file a lot
-"nnoremap gga ggVG"*y
-"nnoremap ,p "*p
-"nnoremap [b :bp<CR>
-"nnoremap ]b :bn<cr>
-
-:iabbrev adn and
-:iabbrev waht what
-:iabbrev tehn then
-:iabbrev @@ mahongtao0x7e0@163.com
-:iabbrev cont count
-:iabbrev retuen return
-:iabbrev pf printf(
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -107,20 +77,6 @@ else
 
 endif " has("autocmd")
 
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
-endif
-
-if has('langmap') && exists('+langnoremap')
-  " Prevent that the langmap option applies to characters that result from a
-  " mapping.  If unset (default), this may break plugins (but it's backward
-  " compatible).
-  set langnoremap
-endif
 
 
 " Add optional packages.
@@ -129,37 +85,12 @@ endif
 " compatible.
 "packadd matchit
 
-noremap <C-L> <Esc>:TlistToggle<CR><c-w>h
-noremap <F5> :NERDTreeToggle<cr>
 
 colorscheme delek
 "execute pathogen#infect()
 
 filetype off                  " required!  
   
-set rtp+=~/.vim/bundle/vundle/  
-call vundle#rc()  
-  
-" let Vundle manage Vundle  
-" required!   
-Bundle 'gmarik/vundle' 
-" 可以通过以下四种方式指定插件的来源  
-" a) 指定Github中vim-scripts仓库中的插件，直接指定插件名称即可，插件明中的空格使用“-”代替。  
-"Bundle 'L9'  
-  
-" b) 指定Github中其他用户仓库的插件，使用“用户名/插件名称”的方式指定  
-"Bundle 'tpope/vim-fugitive'  
-"Bundle 'Lokaltog/vim-easymotion'  
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}  
-"Bundle 'tpope/vim-rails.git'  
-Bundle 'scrooloose/nerdtree.git'  
-"Bundle 'Valloric/YouCompleteMe'  
-Bundle 'yegappan/taglist'
-" c) 指定非Github的Git仓库的插件，需要使用git地址  
-"Bundle 'git://git.wincent.com/command-t.git'  
-  
-" d) 指定本地Git仓库中的插件  
-"Bundle 'file:///Users/gmarik/path/to/plugin'  
   
 filetype plugin indent on     " required!
 
