@@ -12,7 +12,9 @@
 
 - create:
     - ~/downloads
-    - ~/.vim/undo-history
+    - ~/.vim/undo
+    - ~/.vim/backup  
+    - ~/.vim/swap
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
