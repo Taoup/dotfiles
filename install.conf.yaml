@@ -9,6 +9,7 @@
     ~/.vimrc: vimrc
     ~/.gitconfig: gitconfig
     ~/.bashrc: bashrc
+    ~/.bash_profile: bash_profile
     ~/.bash_prompt: bash_prompt
 
 - create:
