@@ -6,9 +6,10 @@
 
 - link:
     ~/.tmux.conf: tmux.conf
-    #~/.vim: vim
     ~/.vimrc: vimrc
     ~/.gitconfig: gitconfig
+    ~/.bashrc: bashrc
+    ~/.bash_prompt: bash_prompt
 
 - create:
     - ~/downloads
