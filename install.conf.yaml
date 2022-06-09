@@ -11,6 +11,7 @@
     ~/.bashrc: bashrc
     ~/.bash_profile: bash_profile
     ~/.bash_prompt: bash_prompt
+    ~/.aliases: aliases
 
 - create:
     - ~/downloads
